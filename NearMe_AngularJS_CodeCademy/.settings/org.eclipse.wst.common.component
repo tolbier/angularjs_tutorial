@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="NearMe1_AngularJS_CodeCademy">
+    <wb-module deploy-name="NearMe_AngularJS_CodeCademy">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
-        <property name="context-root" value="NearMe1_AngularJS_CodeCademy"/>
+        <property name="context-root" value="NearMe_AngularJS_CodeCademy"/>
     </wb-module>
 </project-modules>
