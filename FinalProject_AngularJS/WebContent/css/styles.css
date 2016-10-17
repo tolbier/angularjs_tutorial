@@ -1,0 +1,27 @@
+body{
+  background-color: #272A33;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+	font-style: italic;
+  color:#72D4EC;
+	padding-bottom: 30px;
+}
+
+.header{
+  border-bottom: solid 1px #fff;
+}
+.wrapper{
+	width:400px;
+	margin :0 auto;
+}
+
+.post .title{
+  color: #fff;
+	font-size: 40px;
+}
+.main .row{
+	border-bottom: solid 1px #fff;
+}
