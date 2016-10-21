@@ -8,8 +8,10 @@
 <link
   href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
   rel="stylesheet">
+  
 <link href="css/styles.css" rel="stylesheet">
 <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+<script src="js/vendor/angular-route.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="SuggestionBox" ng-controller="HomeController">
   <div class="container">
@@ -25,17 +27,8 @@
 
     <div class="main">
       <div class="container">
-
-        <div class="row post"
-          ng-repeat="post in posts | orderBy:'upvotes':true ">
-
-          <div class="title">{{post.title}}</div>
-
-          <p>
-<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span> Upvotes: {{post.upvotes}}
-</p>
-        </div>
-      </div>
+		<div ng-view></div>      
+	  </div>
     </div>
     <form ng-submit="addSuggestion()" style="margin-top: 50px">
       <h3>Submit Your Suggestion</h3>

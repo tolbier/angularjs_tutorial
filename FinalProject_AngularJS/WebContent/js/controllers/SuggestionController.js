@@ -1,4 +1,4 @@
-app.controller('HomeController', [ '$scope', 'suggestions',
+app.controller('SuggestionController', [ '$scope', 'suggestions',
     function($scope, suggestions) {
       $scope.posts = suggestions.posts;
       $scope.addSuggestion = function() {
