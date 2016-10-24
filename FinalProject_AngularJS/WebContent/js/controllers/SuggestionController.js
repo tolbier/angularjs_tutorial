@@ -1,25 +1,25 @@
-app.controller('SuggestionController', [ '$scope', 'suggestions',
-    function($scope, suggestions) {
-      $scope.posts = suggestions.posts;
-      $scope.addSuggestion = function() {
 
-        // if input empty, don't submit
-        if (!$scope.title || $scope.title === "") {
-          return;
-        }
+app.controller('SuggestionController', ['$scope', 'suggestions', '$routeParams', 
+	function($scope, suggestions, $routeParams) {
+		$scope.post = suggestions.posts[$routeParams.id];
+		$scope.addComment = function() {
+			  // if input empty, don't submit
+	        if (!$scope.commentBody || $scope.commentBody === "") {
+	          return;
+	        }
 
-        // push suggestion posts in suggestions.js
-        $scope.posts.push({
-          title : $scope.title,
-          upvotes : 0,
-          comments:[]
-        });
+			$scope.post.comments.push({
+				body:$scope.commentBody,
+				upvotes:0
+			});
 
-        // after submit, clear input
-        $scope.title = '';
-      };
-      $scope.upVote = function(post) {
-        post.upvotes++;
-      };
+	        // after submit, clear input
+			$scope.commentBody = '';
+			
 
-    } ]);
+		};
+		$scope.upVoteComment = function(comment) {
+			comment.upvotes++;
+		};
+}]);
+
